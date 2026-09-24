@@ -33,7 +33,7 @@ ${generatedLink}
 Your presence would truly mean the world to us, and we would be honored to celebrate this beautiful moment together.
 
 With love,
-Saseka & Sachinthana ❤️`;
+Harshani & Madhawa ❤️`;
 
   const copyToClipboard = async (text: string, setCopied: React.Dispatch<React.SetStateAction<boolean>>) => {
     try {

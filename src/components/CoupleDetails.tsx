@@ -38,13 +38,13 @@ export const CoupleDetails: React.FC = () => {
             The Groom
           </span>
           <h3 className="text-[#13203b] font-serif text-[5vw] sm:text-[2.5rem] md:text-[3rem] tracking-widest mb-3 sm:mb-6 uppercase drop-shadow-sm">
-            Sachinthana
+            Madhawa
           </h3>
           <div className="text-[#13203b] font-serif text-[2.5vw] sm:text-[18px] md:text-[22px] space-y-1 sm:space-y-2 drop-shadow-sm">
             <p>Son of</p>
-            <p>The Late Mr. Shelton Pathiraja</p>
+            <p>Mr. Nandasiri</p>
             <p className="text-[#c5a059] text-[2vw] sm:text-[14px] md:text-[18px] italic">&</p>
-            <p>Mrs. Ranjanie Dassanayake</p>
+            <p>Mrs. Premawathi</p>
           </div>
         </motion.div>
 
@@ -60,13 +60,13 @@ export const CoupleDetails: React.FC = () => {
             The Bride
           </span>
           <h3 className="text-[#13203b] font-serif text-[5vw] sm:text-[2.5rem] md:text-[3rem] tracking-widest mb-3 sm:mb-6 uppercase drop-shadow-sm">
-            Saseka
+            Harshani
           </h3>
           <div className="text-[#13203b] font-serif text-[2.5vw] sm:text-[18px] md:text-[22px] space-y-1 sm:space-y-2 drop-shadow-sm">
             <p>Daughter of</p>
-            <p>Mr. Layanal Dharmasena</p>
+            <p>Mr. Somarathna</p>
             <p className="text-[#c5a059] text-[2vw] sm:text-[14px] md:text-[18px] italic">&</p>
-            <p>Mrs. Damayanthi Alahakoon</p>
+            <p>Mrs. Padma Jayanthi</p>
           </div>
         </motion.div>
       </div>

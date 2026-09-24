@@ -18,9 +18,9 @@ export const AddressesSection: React.FC = () => {
     },
     poruwa: {
       title: 'Ceremony & Reception',
-      name: 'Grand Oriental Hotel',
-      address: '123 Celebration Blvd, New York, NY',
-      note: 'Ceremony begins at 04:30 PM',
+      name: 'Rimakvin River Edge Resort & Banquet',
+      address: 'Ambalangoda, Sri Lanka',
+      note: 'Ceremony begins at 09:30 AM',
     },
     homecoming: {
       title: 'Post-Wedding Party',

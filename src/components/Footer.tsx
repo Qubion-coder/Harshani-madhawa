@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
           With Love, Until Then
         </h2>
         <p className="font-sans text-[11px] font-light tracking-[0.35em] uppercase mb-7 text-gray-500">
-          17/09/2026
+          26/11/2026
         </p>
         
         <div>
@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
         </div>
         
         <p className="font-display mt-6 text-base sm:text-lg font-light italic text-[#D4AF37]">
-          Saseka & Sachinthana
+          Harshani & Madhawa
         </p>
         <div className="mt-8">
           <p className="text-[#D4AF37] text-xs font-sans tracking-wider">

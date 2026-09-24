@@ -81,10 +81,10 @@ export const RSVPForm: React.FC = () => {
             <div className="h-px w-16 mx-auto bg-[#D4AF37] opacity-35" />
           </div>
           <p className="font-sans text-sm font-light leading-relaxed mb-4 mx-auto max-w-sm text-white/70">
-            2 seat(s) have been reserved in your honor.<br/>Kindly RSVP by August 30th, 2026.
+            2 seat(s) have been reserved in your honor.<br/>Kindly RSVP by November 10th, 2026.
           </p>
           <p className="font-sans text-xs font-light leading-relaxed mb-10 sm:mb-12 mx-auto max-w-sm text-white/50">
-            Sachinthana - 076 834 6556 | Saseka - 071 928 7823
+            Madhawa - 076 834 6556 | Harshani - 071 928 7823
           </p>
           <div>
             {submitted ? (

@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { MapPin, Navigation, Compass, Map } from 'lucide-react';
 
 export const Location: React.FC = () => {
-   const venueAddress = "Grand Oriental Hotel, New York";
+   const venueAddress = "Rimakvin River Edge Resort & Banquet, Ambalangoda";
   const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8443924765634!2d79.9168925!3d6.9056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2597405e3e60d%3A0xc07a81080344d183!2sWaters%20Edge!5e0!3m2!1sen!2slk!4v1714736345678!5m2!1sen!2slk`;
   const liveLocationUrl = "https://maps.app.goo.gl/uXpD3Bf4s4FmS8yJ6";
 
@@ -45,8 +45,8 @@ export const Location: React.FC = () => {
                   <MapPin className="text-brand-primary-light w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-2xl font-serif text-white mb-1">Grand Oriental Hotel</p>
-                  <p className="text-[11px] uppercase tracking-[0.2em] font-medium text-blue-100/60 leading-relaxed mb-6">New York, NY, USA</p>
+                  <p className="text-2xl font-serif text-white mb-1">Rimakvin River Edge Resort & Banquet</p>
+                  <p className="text-[11px] uppercase tracking-[0.2em] font-medium text-blue-100/60 leading-relaxed mb-6">Ambalangoda, Sri Lanka</p>
 
                   <p className="text-blue-100/80 italic font-serif text-lg leading-relaxed max-w-sm mb-10 pl-4 border-l-[1.5px] border-brand-primary-light/40">
                     "A serene and elegant setting where we will begin our new chapter together."
