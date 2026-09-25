@@ -8,21 +8,38 @@ export const Admin: React.FC = () => {
   const [copiedLink, setCopiedLink] = useState(false);
   const [copiedMessage, setCopiedMessage] = useState(false);
 
+  const getDisplayName = (pref: string, name: string) => {
+    const trimmedName = name.trim();
+    if (pref === 'Family') {
+      return `${trimmedName} and Family`;
+    }
+    if (pref === 'Dear') {
+      return trimmedName;
+    }
+    return `${pref} ${trimmedName}`;
+  };
+
   const generateLink = () => {
     if (!guestName.trim()) {
       alert("Please enter a guest name.");
       return;
     }
+    
+    const displayName = getDisplayName(prefix, guestName);
     const baseUrl = window.location.origin;
-    const url = new URL(baseUrl);
-    url.searchParams.set('prefix', prefix);
-    url.searchParams.set('guest', guestName.trim());
-    setGeneratedLink(url.toString());
+    const url = `${baseUrl}/${encodeURIComponent(displayName)}`;
+    
+    setGeneratedLink(url);
     setCopiedLink(false);
     setCopiedMessage(false);
   };
 
-  const messageTemplate = `Dear ${prefix} ${guestName} ❤️
+  const getGreeting = () => {
+    const displayName = getDisplayName(prefix, guestName);
+    return `Dear ${displayName} ❤️`;
+  };
+
+  const messageTemplate = `${getGreeting()}
 
 With joyful hearts, we warmly invite you to celebrate one of the most special days of our lives as we begin our journey together.
 
@@ -33,7 +50,7 @@ ${generatedLink}
 Your presence would truly mean the world to us, and we would be honored to celebrate this beautiful moment together.
 
 With love,
-Harshani & Madhawa ❤️`;
+❤️ Madhawa & Harshani`;
 
   const copyToClipboard = async (text: string, setCopied: React.Dispatch<React.SetStateAction<boolean>>) => {
     try {
@@ -100,10 +117,18 @@ Harshani & Madhawa ❤️`;
                   />
                   <button
                     onClick={() => copyToClipboard(generatedLink, setCopiedLink)}
-                    className="p-3 bg-stone-100 text-stone-600 rounded-lg hover:bg-stone-200 transition-colors flex items-center justify-center min-w-[48px]"
+                    className="px-4 py-3 bg-stone-100 text-stone-600 rounded-lg hover:bg-stone-200 transition-colors flex items-center justify-center gap-2 whitespace-nowrap font-medium text-sm"
                     title="Copy Link"
                   >
-                    {copiedLink ? <Check size={20} className="text-green-600" /> : <Copy size={20} />}
+                    {copiedLink ? (
+                      <>
+                        <Check size={18} className="text-green-600" /> Copied!
+                      </>
+                    ) : (
+                      <>
+                        <Copy size={18} /> Copy Link Only
+                      </>
+                    )}
                   </button>
                 </div>
               </div>

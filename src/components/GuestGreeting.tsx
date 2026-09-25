@@ -1,13 +1,24 @@
 import React from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useParams } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 export const GuestGreeting: React.FC = () => {
   const [searchParams] = useSearchParams();
-  const prefix = searchParams.get('prefix');
-  const guest = searchParams.get('guest');
+  const { guestName } = useParams();
+  
+  // Backwards compatibility for old query string links
+  const oldPrefix = searchParams.get('prefix');
+  const oldGuest = searchParams.get('guest');
 
-  if (!prefix || !guest) {
+  let displayName = '';
+  
+  if (guestName) {
+    displayName = decodeURIComponent(guestName);
+  } else if (oldPrefix && oldGuest) {
+    displayName = `${oldPrefix} ${oldGuest}`;
+  }
+
+  if (!displayName) {
     return null;
   }
 
@@ -27,8 +38,12 @@ export const GuestGreeting: React.FC = () => {
         <h2 
           className="text-[#a87b47] font-serif text-[clamp(1.75rem,5vw,3rem)] tracking-wide leading-tight mb-2 px-4 drop-shadow-sm uppercase"
         >
-          {prefix} {guest}
+          {displayName}
         </h2>
+        
+        <div className="text-[#c5a059] uppercase tracking-[0.1em] text-[10px] sm:text-[12px] font-medium font-sans mt-2 drop-shadow-sm">
+          to celebrate our special day with us.
+        </div>
         
         <div className="flex items-center gap-3 mt-4 w-48 mx-auto">
           <div className="h-[1px] flex-1 bg-[#a87b47]/50"></div>
@@ -39,3 +54,4 @@ export const GuestGreeting: React.FC = () => {
     </div>
   );
 };
+

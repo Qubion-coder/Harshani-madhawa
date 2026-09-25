@@ -9,6 +9,9 @@ export const Rsvp: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const [guestCount, setGuestCount] = useState<number>(1);
+  const [wish, setWish] = useState('');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -26,7 +29,7 @@ export const Rsvp: React.FC = () => {
     setError(null);
 
     try {
-      await submitToGoogleSheet('rsvp', { name, status });
+      await submitToGoogleSheet('rsvp', { name, status, guestCount, wish });
       setIsSubmitted(true);
     } catch (err) {
       console.error(err);
@@ -137,6 +140,40 @@ export const Rsvp: React.FC = () => {
                       Decline with Regret
                     </button>
                   </div>
+                </div>
+
+                {status === 'accept' && (
+                  <div>
+                    <label htmlFor="guestCount" className="block text-sm font-medium text-stone-700 mb-2">
+                      Guest Count
+                    </label>
+                    <select
+                      id="guestCount"
+                      value={guestCount}
+                      onChange={(e) => setGuestCount(Number(e.target.value))}
+                      disabled={isSubmitting}
+                      className="w-full bg-white/80 border border-stone-200 rounded-lg px-4 py-3 text-stone-900 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors font-light shadow-sm"
+                    >
+                      {[1, 2, 3, 4, 5, 6].map(num => (
+                        <option key={num} value={num}>{num} {num === 1 ? 'Guest' : 'Guests'}</option>
+                      ))}
+                    </select>
+                  </div>
+                )}
+
+                <div>
+                  <label htmlFor="wish" className="block text-sm font-medium text-stone-700 mb-2">
+                    A Wish for the Couple
+                  </label>
+                  <textarea
+                    id="wish"
+                    value={wish}
+                    onChange={(e) => setWish(e.target.value)}
+                    rows={3}
+                    className="w-full bg-white/80 border border-stone-200 rounded-lg px-4 py-3 text-stone-900 placeholder-stone-400 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors font-light shadow-sm resize-none"
+                    placeholder="Write a message..."
+                    disabled={isSubmitting}
+                  />
                 </div>
 
                 {error && (
