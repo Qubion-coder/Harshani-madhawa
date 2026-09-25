@@ -91,7 +91,7 @@ export const HeroContent: React.FC = () => {
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants} className="text-[#1a1005] font-serif text-[15px] sm:text-xl tracking-[0.4em] font-bold border-t-2 border-[#2C1810]/50 pt-4 px-8" style={{ textShadow: "0 0 10px rgba(255,255,255,0.8)" }}>
+          <motion.div variants={itemVariants} className="text-[#1a1005] font-serif text-xl sm:text-3xl md:text-4xl tracking-[0.3em] sm:tracking-[0.5em] font-semibold border-t-[1.5px] border-b-[1.5px] border-[#2C1810]/40 py-3 sm:py-5 px-6 sm:px-12 mt-2" style={{ textShadow: "0 0 15px rgba(255,255,255,0.9)" }}>
             26 . 11 . 2026
           </motion.div>
         </motion.div>

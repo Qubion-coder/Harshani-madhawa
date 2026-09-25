@@ -7,6 +7,7 @@ import { IntroVideo } from '../components/IntroVideo';
 import { HeroContent } from '../components/HeroContent';
 import { CoupleDetails } from '../components/CoupleDetails';
 import { SacredUnion } from '../components/SacredUnion';
+import { LocationSection } from '../components/LocationSection';
 import { Countdown } from '../components/Countdown';
 import { GuestGreeting } from '../components/GuestGreeting';
 import { Rsvp } from '../components/Rsvp';
@@ -83,6 +84,7 @@ export const Home: React.FC = () => {
 
             <CoupleDetails />
             <SacredUnion />
+            <LocationSection />
             <Rsvp />
 
             <Footer />

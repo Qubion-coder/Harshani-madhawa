@@ -24,54 +24,62 @@ export const SacredUnion: React.FC = () => {
           <span className="text-[#3b2a1a] uppercase tracking-[0.2em] sm:tracking-[0.3em] text-sm sm:text-[20px] md:text-[24px] font-semibold font-serif mb-1 sm:mb-0 drop-shadow-sm">
             The Sacred
           </span>
-          <h2 className="text-[#3b2a1a] font-serif text-5xl sm:text-[6rem] md:text-[7rem] tracking-tight leading-none uppercase mb-6 sm:mb-8 drop-shadow-sm">
+          <h2 className="text-[#3b2a1a] font-serif text-5xl sm:text-[6rem] md:text-[7rem] tracking-tight leading-none uppercase mb-4 sm:mb-8 drop-shadow-sm">
             Union
           </h2>
 
           <span className="text-[#1a1005] uppercase tracking-[0.15em] text-xs sm:text-[16px] md:text-[18px] font-semibold font-sans mb-1 sm:mb-2 drop-shadow-sm">
             A Celebration Of
           </span>
-          <h3 className="text-[#3b2a1a] font-display text-4xl sm:text-[4.5rem] md:text-[5rem] tracking-tight leading-none italic drop-shadow-sm mb-6 sm:mb-12">
+          <h3 className="text-[#3b2a1a] font-display text-4xl sm:text-[4.5rem] md:text-[5rem] tracking-tight leading-none italic drop-shadow-sm mb-4 sm:mb-12">
             Tradition & Love
           </h3>
 
-          <p className="text-[#1a1005] font-serif text-sm sm:text-[18px] md:text-[22px] leading-[1.8] max-w-[95%] sm:max-w-[85%] mx-auto mb-8 sm:mb-16 drop-shadow-sm">
+          <p className="text-[#1a1005] font-serif text-[13px] sm:text-[18px] md:text-[22px] leading-[1.6] sm:leading-[1.8] max-w-[95%] sm:max-w-[85%] mx-auto mb-5 sm:mb-16 drop-shadow-sm">
             Request the Honor of Your Presence<br/>
             At the Celebration of the Marriage of their beloved children<br/>
-            <span className="font-semibold text-base sm:text-2xl mt-1 sm:mt-2 block">Harshani & Madhawa</span>
+            <span className="font-semibold text-[15px] sm:text-2xl mt-1 sm:mt-2 block">Harshani & Madhawa</span>
           </p>
 
-          <div className="flex flex-col gap-4 sm:gap-8 w-full max-w-[90%] sm:max-w-[75%] mx-auto items-start text-left bg-white/30 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none p-4 sm:p-0 rounded-2xl border border-white/40 sm:border-none shadow-sm sm:shadow-none">
-            <div className="flex items-center gap-3 sm:gap-6 w-full">
-              <div className="w-10 h-10 sm:w-[55px] sm:h-[55px] rounded-full border border-[#3b2a1a] flex items-center justify-center flex-shrink-0 bg-[#fdfaf5]/50 sm:bg-transparent">
-                <CalendarDays className="w-4 h-4 sm:w-[28px] sm:h-[28px] text-[#3b2a1a]" />
-              </div>
-              <div className="flex flex-col flex-1">
-                <span className="text-[#1a1005] uppercase tracking-[0.1em] text-xs sm:text-[18px] md:text-[20px] font-semibold font-serif leading-tight mb-0.5">Thursday, November 26</span>
-                <span className="text-[#3b2a1a] uppercase tracking-[0.05em] text-[9px] sm:text-[15px] md:text-[16px] font-sans">The Year Two Thousand Twenty Six</span>
-              </div>
+          <div className="flex flex-col gap-4 sm:gap-10 w-full max-w-[95%] sm:max-w-[75%] mx-auto items-center text-center bg-white/40 backdrop-blur-md p-5 sm:p-12 rounded-[2rem] border border-white/50 shadow-sm">
+            
+            {/* Date */}
+            <div className="flex flex-col items-center">
+              <CalendarDays className="w-4 h-4 sm:w-7 sm:h-7 text-[#3b2a1a] mb-2 sm:mb-4 opacity-80" strokeWidth={1} />
+              <span className="text-[#1a1005] uppercase tracking-[0.15em] sm:tracking-[0.25em] text-[15px] sm:text-xl md:text-2xl font-semibold font-serif leading-tight mb-1 sm:mb-2">
+                Thursday, November 26
+              </span>
+              <span className="text-[#3b2a1a] uppercase tracking-[0.05em] sm:tracking-[0.15em] text-[10px] sm:text-sm md:text-base font-sans opacity-80">
+                The Year Two Thousand Twenty Six
+              </span>
             </div>
 
-            <div className="flex items-start gap-3 sm:gap-6 w-full">
-              <div className="w-10 h-10 sm:w-[55px] sm:h-[55px] rounded-full border border-[#3b2a1a] flex items-center justify-center flex-shrink-0 bg-[#fdfaf5]/50 sm:bg-transparent mt-1">
-                <Clock className="w-4 h-4 sm:w-[28px] sm:h-[28px] text-[#3b2a1a]" />
-              </div>
-              <div className="flex flex-col flex-1">
-                <span className="text-[#1a1005] uppercase tracking-[0.1em] text-xs sm:text-[18px] md:text-[20px] font-semibold font-serif leading-tight mb-0.5 sm:mb-1">09:30 AM - 04:00 PM</span>
-                <span className="text-[#3b2a1a] tracking-[0.05em] text-[10px] sm:text-[15px] md:text-[16px] font-sans leading-snug">
-                  The Poruwa Ceremony will be held at 10:07 AM
-                </span>
-              </div>
+            {/* Divider */}
+            <div className="w-10 sm:w-24 h-[1px] bg-[#3b2a1a]/20"></div>
+
+            {/* Time */}
+            <div className="flex flex-col items-center">
+              <Clock className="w-4 h-4 sm:w-7 sm:h-7 text-[#3b2a1a] mb-2 sm:mb-4 opacity-80" strokeWidth={1} />
+              <span className="text-[#1a1005] uppercase tracking-[0.15em] sm:tracking-[0.25em] text-[15px] sm:text-xl md:text-2xl font-semibold font-serif leading-tight mb-1 sm:mb-2">
+                09:30 AM - 04:00 PM
+              </span>
+              <span className="text-[#3b2a1a] tracking-[0.05em] sm:tracking-[0.1em] text-[12px] sm:text-base md:text-lg font-sans opacity-80 italic">
+                The Poruwa Ceremony will be held at 10:07 AM
+              </span>
             </div>
 
-            <div className="flex items-center gap-3 sm:gap-6 w-full">
-              <div className="w-10 h-10 sm:w-[55px] sm:h-[55px] rounded-full border border-[#3b2a1a] flex items-center justify-center flex-shrink-0 bg-[#fdfaf5]/50 sm:bg-transparent">
-                <MapPin className="w-4 h-4 sm:w-[28px] sm:h-[28px] text-[#3b2a1a]" />
-              </div>
-              <div className="flex flex-col flex-1">
-                <span className="text-[#1a1005] uppercase tracking-[0.1em] text-xs sm:text-[18px] md:text-[20px] font-semibold font-serif leading-tight mb-0.5 sm:mb-1">Rimakvin River Edge Resort & Banquet</span>
-                <span className="text-[#3b2a1a] uppercase tracking-[0.05em] text-[9px] sm:text-[15px] md:text-[16px] font-sans leading-tight">The Grand Ballroom, Ambalangoda</span>
-              </div>
+            {/* Divider */}
+            <div className="w-10 sm:w-24 h-[1px] bg-[#3b2a1a]/20"></div>
+
+            {/* Location */}
+            <div className="flex flex-col items-center">
+              <MapPin className="w-4 h-4 sm:w-7 sm:h-7 text-[#3b2a1a] mb-2 sm:mb-4 opacity-80" strokeWidth={1} />
+              <span className="text-[#1a1005] uppercase tracking-[0.15em] sm:tracking-[0.25em] text-[15px] sm:text-xl md:text-2xl font-semibold font-serif leading-tight mb-1 sm:mb-2">
+                Rimakvin River Edge Resort
+              </span>
+              <span className="text-[#3b2a1a] uppercase tracking-[0.05em] sm:tracking-[0.15em] text-[10px] sm:text-sm md:text-base font-sans opacity-80">
+                The Grand Ballroom, Ambalangoda
+              </span>
             </div>
           </div>
         </motion.div>
